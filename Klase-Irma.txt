@@ -1,0 +1,115 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+    public class Sjediste
+
+    {
+
+        public Sjediste()
+        {
+
+        }
+
+        public Sjediste(string _pozicija, bool _status, int _brojSjedista)
+        {
+            Brojsjedista = _brojSjedista;
+            Pozicija = _pozicija;
+            Status = _status;
+
+        }
+
+        private string pozicija;
+        private bool status;
+        private int brojSjedista;
+
+        public bool Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+        
+        public string Pozicija
+        {
+            get { return pozicija; }
+            set { pozicija = value; }
+        }
+       
+
+        public int Brojsjedista
+        {
+            get { return brojSjedista; }
+            set { brojSjedista = value; }
+        }
+
+      
+
+      
+
+    }
+}
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+    public class SluzbenikZaKarte:Zaposlenik
+        {
+            public SluzbenikZaKarte() { }
+            public SluzbenikZaKarte(string _ime, string _prezime, string _JMB,string _ID, Odjel _odjel):base(_ime,_prezime,_JMB,_ID,_odjel){}
+           
+ public void registrirajPutnika(Putnik p) { }
+ public void printajKartu(Karta k) { }
+ public Let odaberiLet() { }
+        }
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+public class TipAviona
+        {
+        public TipAviona()
+        {}
+
+        public TipAviona(string _naziv, Sjediste _sjediste) { Naziv = naziv; Sjediste = _sjediste; }
+        private string naziv;
+        private Sjediste sjediste;
+       
+        public Sjediste Sjediste
+        {
+            get { return sjediste; }
+            set { sjediste = value; }
+        }
+        
+        public string Naziv
+        {
+            get { return naziv; }
+            set { naziv = value; }
+        }
+        
+  
+
+    }
+}
+
