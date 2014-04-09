@@ -1,0 +1,100 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+    public class RedLetova
+    {
+        private List<Let> letovi;
+        private int brojLetova;
+        public int BrojLetova
+        {
+            get { return brojLetova; }
+            set { brojLetova = value; }
+        }
+
+public void prikaziLetove() {}
+        public void izlistaj() {}
+    }
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+   public class Let
+    {
+       private DateTime vrijemePolaska;
+       private DateTime vrijemeDolaska;
+       private string destinacija;
+       private string brojLeta;
+       private string gate;
+       private string kasnjenje;
+       private Napomena napomena;
+       public DateTime VrijemePolaska {
+           get { return vrijemePolaska; }
+           set { vrijemePolaska = value; }
+       
+       }
+       public DateTime VrijemeDolaska
+       {
+           get { return vrijemeDolaska; }
+           set { vrijemeDolaska = value; }
+
+       }
+       public string Destinacija {
+           get { return destinacija; }
+           set { destinacija = value; }
+       
+       }
+       public string BrojLeta {
+           get { return brojLeta; }
+           set { brojLeta = value; }
+       }
+
+       public string Gate {
+           get { return gate; }
+           set { gate = value; }
+       }
+       public string Kasnjenje {
+           get { return kasnjenje; }
+           set { kasnjenje = value; }
+       }
+        public Let(DateTime vp, DateTime vd,string d, string bl, string g ) {
+            vrijemePolaska = vp;
+            VrijemeDolaska = vd;
+            Destinacija = d;
+            BrojLeta = bl;
+            Gate = g;
+        }
+
+    }
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+    public class KontrolorLeta:Zaposlenik
+    {
+        public KontrolorLeta(string ime, string prezime, string JMB, string ID):base(ime,prezime,JMB,ID,KontrolorLeta) { }
+        public void unesiInformacijeOletu (string informacija) {}
+    }
+}
