@@ -1,0 +1,119 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+    public class Napomena
+    {
+        public enum napomene { poletio, sletio, otkazan, kasni};
+    }
+
+    public class Odjeli
+    {
+        public enum tipOdjela { CheckIn, Informacije, KontrolaLeta, ZaKarte };
+    }
+
+    public class Putnik
+    {
+        private string ime;
+        public string Ime
+        {
+            get { return ime; }
+            set { ime = value; }
+        }
+        
+        private string prezime;
+        public string Prezime
+        {
+            get { return prezime; }
+            set { prezime = value; }
+        }
+
+        private string jmbg;
+        public string Jmbg
+        {
+            get { return jmbg; }
+            set { jmbg = value; }
+        }
+
+        public Putnik(string _ime, string _prezime, string _jmbg)
+        {
+            Ime = _ime; Prezime = _prezime; Jmbg = _jmbg;
+        }
+        public Putnik() { }
+    }
+
+    public class PutnikOnline:Putnik
+    {
+        private string kod;
+        public string Kod
+        {
+            get { return kod; }
+            set { kod = value; }
+        }
+
+        public PutnikOnline(string _ime, string _prezime, string _jmbg, String _kod): base(_ime, _prezime,_jmbg)
+        {
+            Kod=_kod;
+        }
+        public PutnikOnline() {}
+    }
+
+
+    public class Karta
+    {
+        private int brojKarte;
+        public int BrojKarte
+        {
+            get { return brojKarte; }
+            set { brojKarte = value; }
+        }
+
+        private string brojLeta;
+        public string BrojLeta
+        {
+            get { return brojLeta; }
+            set { brojLeta = value; }
+        }
+
+        private string destinacija;
+        public string Destinacija
+        {
+            get { return destinacija; }
+            set { destinacija = value; }
+        }
+
+        private string brojSjedista;
+        public string BrojSjedista
+        {
+            get { return brojSjedista; }
+            set { brojSjedista = value; }
+        }
+
+        private string gate;
+        public string Gate
+        {
+            get { return gate; }
+            set { gate = value; }
+        }
+
+        private Putnik putnik;
+        public Putnik Putnik
+        {
+            get { return putnik; }
+            set { putnik = value; }
+        }
+
+        public Karta(int _brojKarte, string _brojSjedista, string _gate, Putnik _putnik)
+        {
+            BrojKarte = _brojKarte; BrojSjedista = _brojSjedista; Gate = _gate; Putnik = _putnik;
+        }
+        public Karta() { }
+
+        public void IsprintajKartu();
+
+    }
+}
