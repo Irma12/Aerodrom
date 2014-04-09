@@ -1,0 +1,99 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+    class Zaposlenik
+    {
+        private string ime;
+        private string prezime;
+        private string ID;
+        private string JMB;
+        private Odjel odjel;
+
+        public string Ime {
+           get { return ime; }
+           set { prezime = value; }
+
+        public string Prezime {
+           get { return prezime; }
+           set { prezime = value; }
+
+        public string ID {
+           get { return ID; }
+           set { ID = value; }
+
+        public string JMB {
+           get { return JMB; }
+           set { JMB = value; }
+
+        public Zaposlenik(String ime, String prezime, String id, String jmb, Odjel o)
+        {
+            Ime=ime;
+            Prezime=prezime;
+            ID=id;
+            JMB=jmb;
+            odjel=o;
+        }
+    }
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+    public class SluzbenikZaRegistraciju: Zaposlenik
+    {
+        public SluzbenikZaRegistraciju():base(ime,prezime,JMB,ID,KontrolorLeta) { }
+
+        public void registrirajPutnik() { }
+        public void provjeriLet() { }
+        public void printajKupon() { }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aerodrom
+{
+    public class SluzbenikZaChekIn: Zaposlenik
+    {
+
+        string brojKarte;
+        float prtljag;
+        float dodatnaNaplata;
+        public SluzbenikZaChekIn(string brojKarte, float prtljag, float dodatnaNaplata):base(ime,prezime,JMB,ID,KontrolorLeta) { }
+
+        public string BrojKarte {
+           get { return brojKarte; }
+           set { brojKarte = value; }
+
+        public float Prtljag {
+           get { return prtljag; }
+           set { prtljag = value; }
+
+        public float DodatnaNaplata {
+           get { return dodatnaNaplata; }
+           set { dodatnaNaplata = value; }
+
+        public void obracunajNaplatu() { }
+        public void isprintajPropusnicu() { }
+
+    }
+}
