@@ -1,0 +1,189 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
+
+
+namespace Sjediste
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string user = "Selma";
+            string pass = "";
+            string db = "aerodrom";
+            string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+            int brojSjedista = 1; string pozicija = "A5"; bool status = true;
+            MySqlCommand c = new MySqlCommand("insert into sjediste values ('" + brojSjedista + "','" + pozicija + "','" + status + "')", con);
+            c.ExecuteNonQuery();
+
+
+            // Ucitavanje studenata u listu
+            List<sjediste> sjedista = new List<sjediste>();
+            c = new MySqlCommand("select * from sjediste", con);
+            MySqlDataReader r = c.ExecuteReader();
+            while (r.Read())
+                sjedista.Add(new sjediste(brojSjedista, r.GetString("pozicija"), status));
+        }
+    }
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Sjediste
+{
+    class sjediste
+    {
+        int brojSjedista;
+        string pozicija;
+        bool status;
+
+        public sjediste(int brS, string poz, bool s)
+        {
+            BrojSjedista = brS;
+            Pozicija = poz;
+            Status = s;
+        }
+
+        public int BrojSjedista
+        {
+            get
+            {
+                return brojSjedista;
+            }
+            set
+            {
+                brojSjedista = value;
+            }
+        }
+
+        public string Pozicija
+        {
+            get
+            {
+                return pozicija;
+            }
+            set
+            {
+                pozicija = value;
+            }
+        }
+
+        
+
+        public bool Status
+        {
+            get
+            {
+                return status;
+            }
+            set
+            {
+                status = value;
+            }
+        }
+
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sjediste
+{
+    public interface IDaoCrud<T>
+    {
+        long create(T entity);  // INSERT INTO
+        T read(T entity);        // SELECT FROM WHERE ..
+        T update(T entity);     // UPDATE
+        void delete(T entity);  // DELETE
+        T getById(int id);       // SELECT .. WHRE ID=
+        List<T> getAll();        // SELECT *
+        List<T> getByExample(string name, string value);  // SELECT .. WHERE name=value
+    }
+}
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
+namespace Sjediste
+{
+    public class SjedisteDAO : IDaoCrud<sjediste>
+    {
+        private MySqlConnection con;
+
+        public SjedisteDAO(string host, string db, string user, string pass)
+        {
+            string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
+            con = new MySqlConnection(connectionString);
+            try
+            {
+                con.Open();
+            }
+            catch (Exception e) { throw e; }
+        }
+
+
+        public long create(sjediste entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public sjediste read(sjediste entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public sjediste update(sjediste entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void delete(sjediste entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public sjediste getById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<sjediste> getAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<sjediste> getByExample(string name, string value)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
