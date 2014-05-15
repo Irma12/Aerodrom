@@ -1,0 +1,179 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
+
+
+namespace ConsoleApplication4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string user = "root";
+string pass ="";
+string db = "dao";
+string connectionString = "server=localhost;user="+user+";pwd="+pass+";database="+db;
+MySqlConnection con = new MySqlConnection(connectionString);
+// Unos novog studenata
+con.Open();
+
+            string naziv="TD454", sjediste="1A";
+            int broj = 100;
+
+MySqlCommand c = new MySqlCommand("insert into student values ('" + naziv + "','" +sjediste+ "', '" +broj+"')", con);
+c.ExecuteNonQuery();
+
+
+// Ucitavanje studenata u listu
+List<tipAviona> avioni = new List<tipAviona>();
+c = new MySqlCommand("select * from tipAviona", con);
+MySqlDataReader r = c.ExecuteReader();
+while (r.Read())
+     avioni.Add(new tipAviona(r.GetString("naziv"), r.GetString("sjediste"), r.GetInt32("ukupanBrojSjedista")));
+
+
+
+
+
+        }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication4
+{
+    class tipAviona
+    {
+
+        string naziv, sjediste;
+
+        public string Sjediste
+        {
+            get { return sjediste; }
+            set { sjediste = value; }
+        }
+
+        public string Naziv
+        {
+            get { return naziv; }
+            set { naziv = value; }
+        }
+        int ukupanBrojSjedista;
+
+        public int UkupanBrojSjedista
+        {
+            get { return ukupanBrojSjedista; }
+            set { ukupanBrojSjedista = value; }
+        }
+
+        public tipAviona(string i, string p, int k)  {
+            Naziv=i;
+            Sjediste=p;
+            UkupanBrojSjedista = k;
+        }
+
+
+
+
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    public interface IDaoCrud<T>
+    {
+        long create(T entity);  // INSERT INTO
+        T read(T entity);        // SELECT FROM WHERE ..
+        T update(T entity);     // UPDATE
+        void delete(T entity);  // DELETE
+        T getById(int id);       // SELECT .. WHRE ID=
+        List<T> getAll();        // SELECT *
+        List<T> getByExample(string name, string value);  // SELECT .. WHERE name=value
+    }
+
+
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
+namespace ConsoleApplication4
+{
+    
+public class tipAvionaDAO : IDaoCrud<tipAviona> {
+            private MySqlConnection con;
+
+            public tipAvionaDAO(string host, string db, string user, string pass) {
+string connectionString = "server=localhost;user="+user+";pwd="+pass+";database="+db;
+con = new MySqlConnection(connectionString);
+try  {
+      con.Open();
+} 
+catch (Exception e)   { throw e; }
+ }
+
+            long IDaoCrud<tipAviona>.create(tipAviona entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public tipAviona read(tipAviona entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public tipAviona update(tipAviona entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void delete(tipAviona entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public tipAviona getById(int id)
+            {
+                throw new NotImplementedException();
+            }
+
+            public List<tipAviona> getAll()
+            {
+                throw new NotImplementedException();
+            }
+
+            public List<tipAviona> getByExample(string name, string value)
+            {
+                throw new NotImplementedException();
+            }
+
+
+
+
+}
+}
+
