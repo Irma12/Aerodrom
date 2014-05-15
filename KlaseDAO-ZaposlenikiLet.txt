@@ -1,0 +1,233 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using MySql.Data.MySqlClient;
+using System.Text;
+
+namespace DAL
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string user = "root";
+string pass ="";
+string db = "dao";
+string connectionString = "server=localhost;user="+user+";pwd="+pass+";database="+db;
+MySqlConnection con = new MySqlConnection(connectionString);
+
+con.Open();
+    int brojleta=545;   
+    string vrijemeDolaska ="Subota", destinacija ="Rim", gate="A21",kasnjenje ="5min";
+    string ime = "Irma";
+    string prezime = "sads";
+    string odjel = "Odnosi sa javnoscu";
+    MySqlCommand d = new MySqlCommand("insert into zaposlenik values ('" + ime + " " + prezime + " " + odjel + "')", con);
+MySqlCommand c = new MySqlCommand("insert into let values ('" +brojleta  + " " +vrijemeDolaska+ " "+ destinacija+ "')", con);
+c.ExecuteNonQuery();
+d.ExecuteNonQuery();
+
+
+List<Zaposlenik> zaposlenici = new List<Zaposlenik>();
+d = new MySqlCommand("select * from zaposlenik", con);
+MySqlDataReader p = d.ExecuteReader();
+while (p.Read())
+    zaposlenici.Add(new Zaposlenik(p.GetInt32("ID"),p.GetString("Ime"),p.GetString("Prezime"), p.GetString("JMB"), p.GetString("ODjel")));
+            List<Let> letovi = new List<Let>();
+            c = new MySqlCommand("select * from let", con);
+            MySqlDataReader r = c.ExecuteReader();
+            while (r.Read())
+                letovi.Add(new Let(r.GetInt32("IdLeta"),r.GetDateTime(" VrijemePolaska"), r.GetString("Vrijeme Dolaska"), r.GetString("Destinacija"), r.GetString("Gate"),r.GetString("kašnjenje")));
+        }
+    }
+}
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace DAL
+{
+    class Zaposlenik
+    { 
+        public int IdZaposlenog { get; set; }
+        public string ime { get; set; }
+        public string prezime { get; set; }
+        public string jmb { get; set; }
+        public string odjel { get; set; }
+        public Zaposlenik(int ID,string Ime, string Prezime, string JMB,string Odjel)
+        {
+            this.IdZaposlenog = ID;
+            this.ime = Ime;
+            this.prezime = Prezime;
+            this.jmb = JMB;
+            this.odjel = Odjel;
+
+        }
+    }
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MySql.Data.MySqlClient;
+
+namespace DAL{
+public class ZaposlenikDAO: IDaoCrud<Zaposlenik>
+    {
+       
+            private MySqlConnection con;
+
+            public ZaposlenikDAO(string host, string db, string user, string pass)
+            {
+                string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
+                con = new MySqlConnection(connectionString);
+                try
+                {
+                    con.Open();
+                }
+                catch (Exception e) { throw e; }
+            }
+
+            long IDaoCrud<Zaposlenik>.create(Zaposlenik entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public Let read(Zaposlenik entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public Let update(Zaposlenik entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void delete(Zaposlenik entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public Zaposlenik getById(int id)
+            {
+                throw new NotImplementedException();
+            }
+
+            public List<Zaposlenik> getAll()
+            {
+                throw new NotImplementedException();
+            }
+
+            public List<Zaposlenik> getByExample(string name, string value)
+            {
+                throw new NotImplementedException();
+            }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MySql.Data.MySqlClient;
+namespace DAL
+{
+   public class Let
+    {
+       public int brojLeta { get; set; }
+       public DateTime vrijemePolaska { get; set; }
+       public string vrijemeDolaska { get; set; }
+       public string destinacija { get; set; }
+       public string gate { get; set; }
+       public string kasnjenje { get; set; }
+       public Let(int Broj,DateTime vrijeme,string vrijemeDolaska,string destinacija,string gate,string kasnjenje)
+       {
+           this.brojLeta = Broj;
+          this.vrijemePolaska = vrijeme;
+           this.vrijemeDolaska = vrijemeDolaska;
+           this.destinacija = destinacija;
+           this.gate = gate;
+           this.kasnjenje = kasnjenje;
+       }
+   }
+  
+  
+    
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MySql.Data.MySqlClient;
+
+namespace DAL
+{
+    public class LetDAO: IDaoCrud<Let>
+    {
+       
+            private MySqlConnection con;
+
+            public LetDAO(string host, string db, string user, string pass)
+            {
+                string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
+                con = new MySqlConnection(connectionString);
+                try
+                {
+                    con.Open();
+                }
+                catch (Exception e) { throw e; }
+            }
+
+            long IDaoCrud<Let>.create(Let entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public Let read(Let entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public Let update(Let entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void delete(Let entity)
+            {
+                throw new NotImplementedException();
+            }
+
+            public Let getById(int id)
+            {
+                throw new NotImplementedException();
+            }
+
+            public List<Let> getAll()
+            {
+                throw new NotImplementedException();
+            }
+
+            public List<Let> getByExample(string name, string value)
+            {
+                throw new NotImplementedException();
+            }
+    }
+}
+
+
