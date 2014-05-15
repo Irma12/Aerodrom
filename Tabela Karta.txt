@@ -1,0 +1,209 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
+
+
+namespace ConsoleApplication4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string user = "root";
+string pass ="";
+string db = "dao";
+string connectionString = "server=localhost;user="+user+";pwd="+pass+";database="+db;
+MySqlConnection con = new MySqlConnection(connectionString);
+// Unos novog studenata
+con.Open();
+
+
+            string brojLeta ="TD454", destinacija="Sarajevo", brojSjedista = "100", gate = "2A",
+                putnik_jmb = "1234567891234";
+            int zaposleni_id = 12;
+
+
+            MySqlCommand c = new MySqlCommand("insert into student values ('" + brojLeta + "','" + destinacija + "','" + brojSjedista + "','" + gate + "','" + putnik_jmb + "', '"+ zaposleni_id + "')", con);
+c.ExecuteNonQuery();
+
+
+// Ucitavanje studenata u listu
+List<Karta> avioni = new List<Karta>();
+c = new MySqlCommand("select * from Karta", con);
+MySqlDataReader r = c.ExecuteReader();
+while (r.Read())
+     avioni.Add(new Karta(r.GetString("brojLeta"), r.GetString("destinacija"), r.GetString("brojSjedista"), r.GetString("gate"), r.GetString("putnik_jmb"), r.GetInt32("zaposleni_id")));
+
+
+
+
+
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication4
+{
+    class Karta
+    {
+
+        string brojLeta, destinacija, brojSjedista, gate, putnik_jmb;
+
+        public string Putnik_jmb
+        {
+            get { return putnik_jmb; }
+            set { putnik_jmb = value; }
+        }
+
+        public string Gate
+        {
+            get { return gate; }
+            set { gate = value; }
+        }
+
+        public string BrojSjedista
+        {
+            get { return brojSjedista; }
+            set { brojSjedista = value; }
+        }
+
+        public string Destinacija
+        {
+            get { return destinacija; }
+            set { destinacija = value; }
+        }
+
+        public string BrojLeta
+        {
+            get { return brojLeta; }
+            set { brojLeta = value; }
+        }
+
+        int zaposleni_id;
+
+
+        public int Zaposleni_id
+        {
+            get { return zaposleni_id; }
+            set { zaposleni_id = value; }
+        }
+
+
+
+        public Karta(string p1, string p2, string p3, string p4, string p5, int p6)
+        {
+            BrojLeta = p1;
+            Destinacija = p2;
+            BrojSjedista = p2;
+            Gate = p4;
+            Putnik_jmb = p5;
+            Zaposleni_id = p6;
+        }
+
+
+
+
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
+namespace ConsoleApplication4
+{
+
+
+
+
+    public class KartaDAO : IDaoCrud<Karta>
+    {
+        private MySqlConnection con;
+
+        public KartaDAO(string host, string db, string user, string pass)
+        {
+            string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
+            con = new MySqlConnection(connectionString);
+            try
+            {
+                con.Open();
+            }
+            catch (Exception e) { throw e; }
+        }
+
+
+        long IDaoCrud<Karta>.create(Karta entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Karta read(Karta entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Karta update(Karta entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void delete(Karta entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Karta getById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Karta> getAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Karta> getByExample(string name, string value)
+        {
+            throw new NotImplementedException();
+        }
+
+
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    public interface IDaoCrud<T>
+    {
+        long create(T entity);  // INSERT INTO
+        T read(T entity);        // SELECT FROM WHERE ..
+        T update(T entity);     // UPDATE
+        void delete(T entity);  // DELETE
+        T getById(int id);       // SELECT .. WHRE ID=
+        List<T> getAll();        // SELECT *
+        List<T> getByExample(string name, string value);  // SELECT .. WHERE name=value
+    }
+
+
+}
