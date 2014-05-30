@@ -1,0 +1,157 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using MySql.Data.MySqlClient;
+using System.Text;
+
+namespace DAL
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string user = "root";
+            string pass = "";
+            string db = "dao";
+            string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
+            MySqlConnection con = new MySqlConnection(connectionString);
+
+            con.Open();
+   
+         
+            string ime = "Irma";
+            string prezime = "sads";
+            string odjel = "Odnosi sa javnoscu";
+            MySqlCommand d = new MySqlCommand("insert into zaposlenik values ('" + ime + " " + prezime + " " + odjel + "')", con);
+           
+            d.ExecuteNonQuery();
+
+
+            List<Osoba> osobe = new List<Osoba>();
+            d = new MySqlCommand("select * from osobe", con);
+            MySqlDataReader p = d.ExecuteReader();
+            while (p.Read())
+                osobe.Add(new Osoba(p.GetInt32("ID"), p.GetString("Ime"), p.GetString("Prezime"), p.GetString("JMB"), p.GetString("ODjel")));
+        }
+    }
+}
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace DAL
+{
+    class Osoba
+    {
+        public int IdOsobe { get; set; }
+        public string ime { get; set; }
+        public string prezime { get; set; }
+        public string jmb { get; set; }
+        public string odjel { get; set; }
+        public Osoba(int ID, string Ime, string Prezime, string JMB, string Odjel)
+        {
+            this.IdOsobe = ID;
+            this.ime = Ime;
+            this.prezime = Prezime;
+            this.jmb = JMB;
+            this.odjel = Odjel;
+
+        }
+    }
+}
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MySql.Data.MySqlClient;
+
+    public interface IDaoCrud<T>
+    {
+        long create(T entity);  // INSERT INTO
+        T read(T entity);        // SELECT FROM WHERE ..
+        T update(T entity);     // UPDATE
+        void delete(T entity);  // DELETE
+        T getById(int id);       // SELECT .. WHRE ID=
+        List<T> getAll();        // SELECT *
+        List<T> getByExample(string name, string value);  // SELECT .. WHERE name=value
+    }
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MySql.Data.MySqlClient;
+
+namespace DAL
+{
+
+    public class OsobaDAO : IDaoCrud<Osoba>
+    {
+
+        private MySqlConnection con;
+
+        public OsobaDAO(string host, string db, string user, string pass)
+        {
+            string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
+            con = new MySqlConnection(connectionString);
+            try
+            {
+                con.Open();
+            }
+            catch (Exception e) { throw e; }
+        }
+
+        public long create(Osoba entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Osoba read(Osoba entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Osoba update(Osoba entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void delete(Osoba entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Osoba getById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Osoba> getAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Osoba> getByExample(string name, string value)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+
+            
