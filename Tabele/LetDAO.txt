@@ -1,0 +1,156 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using MySql.Data.MySqlClient;
+using System.Text;
+
+
+namespace DAL
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string user = "root";
+            string pass = "";
+            string db = "dao";
+            string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
+            MySqlConnection con = new MySqlConnection(connectionString);
+
+            con.Open();
+
+            int brojleta = 545;
+            string vrijemeDolaska = "Subota", destinacija = "Rim", gate = "A21", kasnjenje = "5min";
+
+            MySqlCommand c = new MySqlCommand("insert into letovi values ('" +brojleta  + " " +vrijemeDolaska+ " "+ destinacija+ "')", con);
+
+
+            c.ExecuteNonQuery();
+
+
+            List<Let> letovi = new List<Let>();
+            c = new MySqlCommand("select * from letovi", con);
+            MySqlDataReader r = c.ExecuteReader();
+            while (r.Read())
+                letovi.Add(new Let(r.GetInt32("IdLeta"), r.GetDateTime(" VrijemePolaska"), r.GetString("Vrijeme Dolaska"), r.GetString("Destinacija"), r.GetString("Gate"), r.GetString("kašnjenje")));
+        }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MySql.Data.MySqlClient;
+namespace DAL
+{
+    public class Let
+    {
+        public int brojLeta { get; set; }
+        public DateTime vrijemePolaska { get; set; }
+        public string vrijemeDolaska { get; set; }
+        public string destinacija { get; set; }
+        public string gate { get; set; }
+        public string kasnjenje { get; set; }
+        public Let(int Broj, DateTime vrijeme, string vrijemeDolaska, string destinacija, string gate, string kasnjenje)
+        {
+            this.brojLeta = Broj;
+            this.vrijemePolaska = vrijeme;
+            this.vrijemeDolaska = vrijemeDolaska;
+            this.destinacija = destinacija;
+            this.gate = gate;
+            this.kasnjenje = kasnjenje;
+        }
+    }
+
+
+
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public interface IDaoCrud<T>
+{
+    long create(T entity);  // INSERT INTO
+    T read(T entity);        // SELECT FROM WHERE ..
+    T update(T entity);     // UPDATE
+    void delete(T entity);  // DELETE
+    T getById(int id);       // SELECT .. WHRE ID=
+    List<T> getAll();        // SELECT *
+    List<T> getByExample(string name, string value);  // SELECT .. WHERE name=value
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
+namespace DAL
+{
+    public class LetDAO : IDaoCrud<Let>
+    {
+        private MySqlConnection con;
+
+        public LetDAO(string host, string db, string user, string pass)
+        {
+            string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
+            con = new MySqlConnection(connectionString);
+            try
+            {
+                con.Open();
+            }
+            catch (Exception e) { throw e; }
+        }
+        
+    
+public long create(Let entity)
+{
+ 	throw new NotImplementedException();
+}
+
+public Let read(Let entity)
+{
+ 	throw new NotImplementedException();
+}
+
+public Let update(Let entity)
+{
+ 	throw new NotImplementedException();
+}
+
+public void delete(Let entity)
+{
+ 	throw new NotImplementedException();
+}
+
+public Let getById(int id)
+{
+ 	throw new NotImplementedException();
+}
+
+public List<Let> getAll()
+{
+ 	throw new NotImplementedException();
+}
+
+public List<Let> getByExample(string name, string value)
+{
+ 	throw new NotImplementedException();
+}
+}
+}
+
+
