@@ -12,3 +12,16 @@ c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug
 c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.Uposlenik.resources
 C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.exe
 C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.pdb
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\bin\Debug\Projekat.exe
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\bin\Debug\Projekat.pdb
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.csprojResolveAssemblyReference.cache
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.CheckIn.resources
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.Pocetna.resources
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.Form2.resources
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.Let.resources
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.Login.resources
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.PregledDokumenata.resources
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.Properties.Resources.resources
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.Rezervacija.resources
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.Uposlenik.resources
+C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.csproj.GenerateResource.Cache
