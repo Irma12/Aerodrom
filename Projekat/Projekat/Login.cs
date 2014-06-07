@@ -19,8 +19,14 @@ namespace Projekat
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Uspješno ste se ulogovali!");
-            Form2 f1 = new Form2();
+            Glavna f1 = new Glavna();
             f1.ShowDialog();
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

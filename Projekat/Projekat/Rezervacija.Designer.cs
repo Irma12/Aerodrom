@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rezervacija));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,14 +57,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(41, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(715, 395);
+            this.groupBox1.Size = new System.Drawing.Size(700, 392);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kupovina i rezervacija karata";
@@ -88,6 +91,7 @@
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(281, 125);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(62, 32);
@@ -97,30 +101,36 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.Color.MediumBlue;
             this.button3.Location = new System.Drawing.Point(104, 244);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(85, 28);
             this.button3.TabIndex = 4;
             this.button3.Text = "Kupi";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.MediumBlue;
             this.button2.Location = new System.Drawing.Point(195, 244);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 28);
             this.button2.TabIndex = 5;
             this.button2.Text = "Rezerviši";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button4.Location = new System.Drawing.Point(589, 346);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 28);
             this.button4.TabIndex = 6;
             this.button4.Text = "Izađi";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
@@ -136,6 +146,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(361, 46);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(313, 284);
@@ -243,9 +254,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(782, 468);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "Rezervacija";
             this.Text = "Rezervacija";
             this.groupBox1.ResumeLayout(false);

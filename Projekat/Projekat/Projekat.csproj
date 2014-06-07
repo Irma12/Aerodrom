@@ -56,11 +56,11 @@
     <Compile Include="Pocetna.Designer.cs">
       <DependentUpon>Pocetna.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Glavna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Glavna.Designer.cs">
+      <DependentUpon>Glavna.cs</DependentUpon>
     </Compile>
     <Compile Include="Let.cs">
       <SubType>Form</SubType>
@@ -100,8 +100,8 @@
     <EmbeddedResource Include="Pocetna.resx">
       <DependentUpon>Pocetna.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Glavna.resx">
+      <DependentUpon>Glavna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Let.resx">
       <DependentUpon>Let.cs</DependentUpon>

@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Projekat
 {
-    public partial class Form2 : Form
+    public partial class Glavna : Form
     {
-        public Form2()
+        public Glavna()
         {
             InitializeComponent();
         }
@@ -29,6 +29,16 @@ namespace Projekat
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Glavna_Load(object sender, EventArgs e)
         {
 
         }
