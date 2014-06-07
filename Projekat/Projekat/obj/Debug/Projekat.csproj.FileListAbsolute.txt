@@ -1,0 +1,12 @@
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\bin\Debug\Projekat.exe
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\bin\Debug\Projekat.pdb
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.Form1.resources
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.exe
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.pdb
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.Form2.resources
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.Let.resources
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.Login.resources
+c:\users\admin\documents\visual studio 2012\Projects\Projekat\Projekat\obj\Debug\Projekat.Uposlenik.resources
