@@ -1,6 +1,6 @@
 ﻿namespace Projekat
 {
-    partial class Form1
+    partial class Pocetna
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pocetna));
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
