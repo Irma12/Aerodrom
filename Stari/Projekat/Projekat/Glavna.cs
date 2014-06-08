@@ -61,5 +61,13 @@ namespace Projekat
         {
 
         }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox13.Text.Length()=10){
+                MessageBox.Show("Pronadjen prtljag s tim Bar kodom!");
+                button9.Enabled();
+            }
+        }
     }
 }
