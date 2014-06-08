@@ -1,25 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
 
 namespace Projekat
 {
-    public partial class Let : Form
+    class Let
     {
-        public Let()
+        private string polaz;
+        private string p2;
+        private DateTime dateTime1;
+        private DateTime dateTime2;
+        private string p3;
+
+        public Let(string p1, string p2, DateTime dateTime1, DateTime dateTime2, string p3)
         {
-            InitializeComponent();
+            // TODO: Complete member initialization
+            this.polaz = p1;
+            this.p2 = p2;
+            this.dateTime1 = dateTime1;
+            this.dateTime2 = dateTime2;
+            this.p3 = p3;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public Let()
         {
-            MessageBox.Show("Uspjesno ste unijeli let");
-            this.Close();
+            // TODO: Complete member initialization
         }
+
+
     }
 }

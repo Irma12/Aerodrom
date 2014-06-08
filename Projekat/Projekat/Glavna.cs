@@ -18,14 +18,12 @@ namespace Projekat
 
         private void dodajLetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Let l = new Let();
-            l.Show();
+          
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Let l = new Let();
-            l.ShowDialog();
+        
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -38,16 +36,11 @@ namespace Projekat
 
         }
 
-        private void Glavna_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            Form f = new Let();
-            f.Show();
-            Close();
+            
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -64,5 +57,40 @@ namespace Projekat
         {
 
         }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (polaziste.SelectedIndex == destinacija.SelectedIndex)
+            {
+                errorProvider1.SetError(destinacija, "Greska");
+                trakaGreske.Text = "Polaziste i destinacija su iste!";
+            }
+            else if(polijetanje.Value > slijetanje.Value)
+            {
+                errorProvider1.SetError(polijetanje, "Greska");
+                trakaGreske.Text = "Nije moguće slijetanje prije polijetanja";
+            }
+            else
+            {
+                Let let1 = new Let(polaziste.SelectedText,destinacija.SelectedText,Convert.ToDateTime(polijetanje.Value), Convert.ToDateTime(slijetanje.Value),gatebox.Text);
+            }
+        }
+
+        
     }
 }

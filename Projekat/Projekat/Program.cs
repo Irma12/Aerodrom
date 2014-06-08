@@ -17,5 +17,7 @@ namespace Projekat
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Pocetna());
         }
+
+        
     }
 }
