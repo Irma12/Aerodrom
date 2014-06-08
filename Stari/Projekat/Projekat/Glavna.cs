@@ -38,10 +38,7 @@ namespace Projekat
 
         }
 
-        private void Glavna_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {

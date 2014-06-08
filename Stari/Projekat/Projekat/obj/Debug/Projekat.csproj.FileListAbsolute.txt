@@ -25,3 +25,5 @@ C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projeka
 C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.Uposlenik.resources
 C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.csproj.GenerateResource.Cache
 C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Projekat\Projekat\obj\Debug\Projekat.Glavna.resources
+C:\Users\Admin\Documents\GitHub\Aerodrom\Stari\Projekat\Projekat\obj\Debug\Projekat.exe
+C:\Users\Admin\Documents\GitHub\Aerodrom\Stari\Projekat\Projekat\obj\Debug\Projekat.pdb
