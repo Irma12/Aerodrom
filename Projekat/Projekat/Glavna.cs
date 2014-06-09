@@ -517,6 +517,14 @@ namespace Projekat
 
                             if (checkBox1.Checked == true)
                             {
+                                if (Convert.ToInt32(textBox2.Text) > 60)
+                                {
+                                    textBox3.Text = (Convert.ToInt32(textBox2.Text) - 60).ToString() + ",00 KM";
+                                }
+                                else
+                                {
+                                    textBox3.Text = "00,00 KM";
+                                }
                                 errorProvider1.SetError(LetchtextBox12, "");
                                 errorProvider1.SetError(KartachtextBox1, "");
                                 errorProvider1.SetError(checkBox1, "");

@@ -147,6 +147,7 @@
             this.button16 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -165,7 +166,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.trakaGreske = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button9 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1152,6 +1152,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(151, 239);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
@@ -1193,6 +1194,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(151, 155);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
@@ -1703,6 +1705,17 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Otkazivanje karte";
             // 
+            // button9
+            // 
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Location = new System.Drawing.Point(192, 276);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(85, 27);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Potvrdi";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(105, 242);
@@ -1844,17 +1857,6 @@
             // 
             this.trakaGreske.Name = "trakaGreske";
             this.trakaGreske.Size = new System.Drawing.Size(0, 17);
-            // 
-            // button9
-            // 
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(192, 276);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(85, 27);
-            this.button9.TabIndex = 15;
-            this.button9.Text = "Potvrdi";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // Glavna
             // 
