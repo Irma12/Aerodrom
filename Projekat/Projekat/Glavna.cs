@@ -33,10 +33,7 @@ namespace Projekat
 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
@@ -50,10 +47,7 @@ namespace Projekat
 
 
 
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
@@ -120,6 +114,7 @@ namespace Projekat
                     }
                     
                     letovi.Add(let1);
+                    dataGridView1.DataSource = letovi;
 
                 
                     brojLetaTextbox.Text = "18AA86-" + letovi.Count() / 5 + letovi.Count();
@@ -667,8 +662,18 @@ namespace Projekat
 
         }
 
-            
-            
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = Let;
+        }
+
+        
+
+       
+       
+     
+
+         
         
 
 
