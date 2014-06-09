@@ -41,3 +41,12 @@ C:\Users\Admin\Documents\GitHub\Aerodrom\Stari\Projekat\Projekat\obj\Debug\Proje
 C:\Users\Sabahudin\Documents\GitHub\Aerodrom\Stari\Projekat\Projekat\obj\Debug\Projekat.exe
 C:\Users\Sabahudin\Desktop\Projekat\Projekat\obj\Debug\Projekat.exe
 C:\Users\Sabahudin\Desktop\Projekat\Projekat\obj\Debug\Projekat.pdb
+C:\Users\Sabahudin\Desktop\Projekat\Projekat\obj\Debug\Projekat.csprojResolveAssemblyReference.cache
+C:\Users\Sabahudin\Desktop\Projekat\Projekat\obj\Debug\Projekat.Pocetna.resources
+C:\Users\Sabahudin\Desktop\Projekat\Projekat\obj\Debug\Projekat.Glavna.resources
+C:\Users\Sabahudin\Desktop\Projekat\Projekat\obj\Debug\Projekat.Login.resources
+C:\Users\Sabahudin\Desktop\Projekat\Projekat\obj\Debug\Projekat.Properties.Resources.resources
+C:\Users\Sabahudin\Desktop\Projekat\Projekat\obj\Debug\Projekat.csproj.GenerateResource.Cache
+C:\Users\Sabahudin\Desktop\Projekat\Projekat\bin\Debug\Projekat.exe
+C:\Users\Sabahudin\Desktop\Projekat\Projekat\bin\Debug\Projekat.pdb
+C:\Users\Sabahudin\Desktop\Projekat\Projekat\obj\Debug\Projekat.Spasavanje.resources

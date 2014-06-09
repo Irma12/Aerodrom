@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTipAviona xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TipAviona>
+    <ImeTipa>T-A83</ImeTipa>
+    <BrojSjedista>50</BrojSjedista>
+  </TipAviona>
+  <TipAviona>
+    <ImeTipa>T-bh</ImeTipa>
+    <BrojSjedista>70</BrojSjedista>
+  </TipAviona>
+  <TipAviona>
+    <ImeTipa>O-456</ImeTipa>
+    <BrojSjedista>70</BrojSjedista>
+  </TipAviona>
+  <TipAviona>
+    <ImeTipa>K-456</ImeTipa>
+    <BrojSjedista>110</BrojSjedista>
+  </TipAviona>
+  <TipAviona>
+    <ImeTipa>Ka-456</ImeTipa>
+    <BrojSjedista>110</BrojSjedista>
+  </TipAviona>
+</ArrayOfTipAviona>

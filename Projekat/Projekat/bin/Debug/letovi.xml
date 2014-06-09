@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfLet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Let>
+    <karte />
+    <sjedista />
+    <TipAv>
+      <ImeTipa>O-456</ImeTipa>
+      <BrojSjedista>70</BrojSjedista>
+    </TipAv>
+    <VrijemePolaska>2014-06-10T02:04:00</VrijemePolaska>
+    <VrijemeDolaska>2014-06-11T02:05:00</VrijemeDolaska>
+    <Destinacija>Zagreb</Destinacija>
+    <BrojLeta>18AA86-00</BrojLeta>
+    <Gate>B</Gate>
+    <Cijena>100</Cijena>
+  </Let>
+  <Let>
+    <karte />
+    <sjedista />
+    <TipAv>
+      <ImeTipa>T-bh</ImeTipa>
+      <BrojSjedista>70</BrojSjedista>
+    </TipAv>
+    <VrijemePolaska>2014-06-10T02:04:00</VrijemePolaska>
+    <VrijemeDolaska>2014-06-11T02:05:00</VrijemeDolaska>
+    <Destinacija>Prag</Destinacija>
+    <BrojLeta>18AA86-01</BrojLeta>
+    <Gate>C</Gate>
+    <Cijena>130</Cijena>
+  </Let>
+  <Let>
+    <karte />
+    <sjedista />
+    <TipAv>
+      <ImeTipa>T-bh</ImeTipa>
+      <BrojSjedista>70</BrojSjedista>
+    </TipAv>
+    <VrijemePolaska>2014-06-10T02:04:00</VrijemePolaska>
+    <VrijemeDolaska>2014-06-11T02:05:00</VrijemeDolaska>
+    <Destinacija>Prag</Destinacija>
+    <BrojLeta>18AA86-02</BrojLeta>
+    <Gate>C</Gate>
+    <Cijena>130</Cijena>
+  </Let>
+  <Let>
+    <karte />
+    <sjedista />
+    <TipAv>
+      <ImeTipa>T-bh</ImeTipa>
+      <BrojSjedista>70</BrojSjedista>
+    </TipAv>
+    <VrijemePolaska>2014-06-18T04:11:00</VrijemePolaska>
+    <VrijemeDolaska>2014-06-19T05:05:00</VrijemeDolaska>
+    <Destinacija>Beograd</Destinacija>
+    <BrojLeta>18AA86-03</BrojLeta>
+    <Gate>A</Gate>
+    <Cijena>140</Cijena>
+  </Let>
+</ArrayOfLet>

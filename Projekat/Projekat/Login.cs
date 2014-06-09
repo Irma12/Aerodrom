@@ -18,10 +18,15 @@ namespace Projekat
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Uspješno ste se ulogovali!");
-            Glavna f1 = new Glavna();
-            f1.ShowDialog();
-            Close();
+            if (maskedTextBox1.Text == "aerodrom")
+            {
+                MessageBox.Show("Uspješno ste se ulogovali!");
+                Glavna f1 = new Glavna();
+                f1.ShowDialog();
+            }
+            else
+            MessageBox.Show("Pasvord nije tačan");
+
         }
 
         private void button2_Click(object sender, EventArgs e)
